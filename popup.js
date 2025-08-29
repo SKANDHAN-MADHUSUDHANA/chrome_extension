@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const link = item.getAttribute("data-link");
       navigator.clipboard.writeText(link).then(() => {
         // Feedback
-        item.textContent = item.textContent + " ✅";
+        item.textContent = item.textContent + " Copied";
         setTimeout(() => {
-          item.textContent = item.textContent.replace(" ✅", "");
+          item.textContent = item.textContent.replace(" Copied", "");
         }, 1000);
       });
     });

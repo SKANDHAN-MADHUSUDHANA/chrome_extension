@@ -32,19 +32,6 @@
     <h3 class="link-box" data-link="https://www.skandhan-madhusudhana.com">Portfolio</h3>
     <h3 class="link-box" data-link="https://github.com/SKANDHAN-MADHUSUDHANA">GitHub</h3>
 
-    <script>
-      document.querySelectorAll(".link-box").forEach(item => {
-        item.addEventListener("click", () => {
-          const link = item.getAttribute("data-link");
-          navigator.clipboard.writeText(link).then(() => {
-            // Optional feedback (popup or alert)
-            item.textContent = item.textContent + " ✅";
-            setTimeout(() => {
-              item.textContent = item.textContent.replace(" ✅", "");
-            }, 1000);
-          });
-        });
-      });
-    </script>
+    <script src="popup.js"></script>
   </body>
 </html>
